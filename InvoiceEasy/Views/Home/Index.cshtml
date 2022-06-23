@@ -1,0 +1,16 @@
+﻿@model IEnumerable<InvoiceEasy.ViewModels.InvoiceViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    @foreach (var invoice in Model)
+    {
+        <h1>@invoice.uniqueNumber</h1>
+        <p>@invoice.seller</p>
+        <p>@invoice.buyer</p>
+    }
+</div>
